@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PcBuilder</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="saldo">Su configuracion actual costara:</string>
+    <string name="cpu">CPU</string>
+    <string name="gpu">Tarjeta de Video</string>
+    <string name="motherboard">Tarjeta Madre</string>
+    <string name="ram">Memoria</string>
+    <string name="storage">Disco Duro</string>
+    <string name="software">Sistema Operativo</string>
+
+</resources>
