@@ -22,6 +22,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ActivityTwo"
+            android:label="@string/title_activity_activity_two" >
+        </activity>
+        <activity
+            android:name=".Crear"
+            android:label="@string/title_activity_crear" >
+        </activity>
     </application>
 
 </manifest>

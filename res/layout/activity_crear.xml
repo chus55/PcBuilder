@@ -6,14 +6,14 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.jesdan.pcbuilder.MainActivity" 
+    tools:context="com.jesdan.pcbuilder.Crear" 
     android:orientation="vertical">
 
-    <TextView
+   <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/final2"
+        android:text="@string/saldo"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <EditText
@@ -21,7 +21,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="numberDecimal" >
+        android:inputType="numberDecimal"
+        android:text="@string/precioInicial" >
 
         <requestFocus />
     </EditText>
@@ -30,18 +31,36 @@
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/crea" />
+        android:text="@string/cpu" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/mandar" />
+        android:text="@string/gpu" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hacerca" />
+        android:text="@string/motherboard" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/ram" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/storage" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/salvar" />
 
 </LinearLayout>

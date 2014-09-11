@@ -3,18 +3,36 @@ package com.jesdan.pcbuilder;
 import java.util.Calendar;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
+	
+	double TOTAL = 0.0;
+	String PROCESADOR ="";
+	String VIDEO = "";
+	String MADRE = "";
+	String RANDOM = "";
+	String DISK = "";
+	
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        final EditText PRECIO = (EditText)findViewById(R.id.editText1);
+		PRECIO.setFocusable(false);
+		
+        
         Calendar c = Calendar.getInstance();
         double horas = c.getTime().getHours();
         if(horas<=12){
@@ -24,7 +42,36 @@ public class MainActivity extends ActionBarActivity {
         }else if(horas>18){
         	Toast.makeText(getApplicationContext(),"Buenas noches", Toast.LENGTH_SHORT).show();
         }
+        
+        Button CREA = (Button)findViewById(R.id.button1);
+        Button MANDAR = (Button)findViewById(R.id.button2);
+        Button HACERCA = (Button)findViewById(R.id.button3);
+        
+        CREA.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				Intent PC = new Intent(getApplicationContext(),Crear.class);
+				startActivityForResult(PC,1);
+			}
+        });
+       
     }
+    
+protected void onActivityResult(int requestCode, int resultCode, Intent data){
+    	
+    	if(requestCode==1){
+    		if(resultCode==RESULT_OK){
+    			TOTAL = data.getDoubleExtra("TOTAL", -1);
+    			PROCESADOR= data.getStringExtra("PROCESADOR");
+    			VIDEO = data.getStringExtra("VIDEO");
+    			MADRE = data.getStringExtra("MADRE");
+    			RANDOM = data.getStringExtra("RANDOM");
+    			DISK = data.getStringExtra("DISK");
+    		}
+    	}
+    	
+}  	
 
 
     @Override

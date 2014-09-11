@@ -11,5 +11,13 @@
     <string name="ram">Memoria</string>
     <string name="storage">Disco Duro</string>
     <string name="software">Sistema Operativo</string>
+    <string name="title_activity_crear">Crear</string>
+    <string name="crea">Crea tu PC!</string>
+    <string name="final2">Su configuracion final costara:</string>
+    <string name="hacerca">Hacerca de nosotros</string>
+    <string name="mandar">Manda tu lista y su costo por correo</string>
+    <string name="salvar">Salvar</string>
+    <string name="precioInicial">0.0</string>
+    <string name="title_activity_activity_two">Jajaja</string>
 
 </resources>
